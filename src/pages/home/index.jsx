@@ -3,7 +3,7 @@ import {Flex, Button, Text, Image, SimpleGrid, UnorderedList, ListItem, Input, S
 import Navbar from './../../components/navbar/index.jsx';
 import {useNavigate} from "react-router-dom"
 import Footer from './../../components/footer/index.jsx';
-import {aboutUs, eBook, eBookFree} from './../../assets/landingPage/export.js';
+import {aboutUs, eBookFree} from './../../assets/landingPage/export.js';
 import ReactTextTransition, { presets } from "react-text-transition";
 import LandingPageMarquee from './../../components/landingPageMarquee/index.jsx';
 import LandingPageCarousel from './../../components/landingPageCarousel/index.jsx';
