@@ -157,7 +157,7 @@ const Index = () => {
                   <Flex fontFamily="satoshi" position='relative' style={{ fontSize: 'clamp(30px, 4vw, 50px)' }} fontWeight='900' lineHeight='1.3' textAlign='center'>Create. Influence. Earn. <br /> Transform Your Skills into Income.
                   {isGreaterThan600 && <Flex w='fit-content' position='absolute' fontSize='15px' left={isGreaterThan1000 ? '70px' : "30px"} top={isGreaterThan1000 ?'-10px' : "-20px"} px='20px' py='5px' bg='#F9A602' borderRadius='30px' color='white' fontWeight='600' style={{transform: "rotate(-25deg)"}}>Hi Creators</Flex>} 
                   </Flex>
-                  <Text textAlign='center' my='10px' fontWeight='500' opacity='0.8'>Modify your knowledge into profitable online courses{isGreaterThan600 && <br/>} with personalized platforms.</Text>
+                  <Text textAlign='center' my='10px' fontWeight='500' opacity='0.8'>Modify your knowledge into profitable online courses {isGreaterThan600 && <br/>} with personalized platforms.</Text>
                   <Button onClick={() => _HandleGetStarted()} my='20px' w='200px' colorScheme='blue' fontWeight='400' fontSize='13px' h='35px'>Get Started</Button>
                   <Text style={{ fontSize: 'clamp(20px, 4vw, 30px)' }} mt='30px' fontWeight='800'>Which Creators we serve</Text>
                 </Flex>
@@ -179,7 +179,7 @@ const Index = () => {
           </Flex>
 
           <Flex w={isGreaterThan1000 ? '80%' : "95%"} mx='auto' flexDir='column' alignItems='center'>
-            <Text fontFamily="satoshi" mt='100px' mb='30px' style={{ fontSize: 'clamp(30px, 4vw, 50px)' }} fontWeight='900' lineHeight='1.3'>Our services</Text>
+            <Text fontFamily="satoshi" mt='100px' mb='30px' style={{ fontSize: 'clamp(30px, 4vw, 50px)' }} fontWeight='800' lineHeight='1.3'>Our services</Text>
             <LandingPageCarousel />
           </Flex>
 
