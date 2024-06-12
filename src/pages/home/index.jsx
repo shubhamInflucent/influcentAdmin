@@ -11,7 +11,6 @@ import sanityClient from '@sanity/client';
 import PaymentFunction from './../../components/payment/index.jsx';
 import emailjs from 'emailjs-com';
 import InflucentEbook from './../../assets/landingPage/Influcent_E-Book.pdf';
-import Fade from "react-reveal/Fade";
 
 const textTerms = ["Business", "Yoga", "Music", "Finance", "Fitness", "Astrology", "Designer", "Educator" ];
 const initialFormState = {
@@ -156,26 +155,12 @@ const Index = () => {
 
           <Flex py='100px' w={isGreaterThan1000 ? '80%' : "95%"} mx='auto' >
                 <Flex flexDir='column' alignItems='center' mx='auto'>
-                  <Flex flexDir='column' fontFamily="satoshi" position='relative' style={{ fontSize: 'clamp(30px, 4vw, 50px)' }} fontWeight='800' lineHeight='1.3' textAlign='center'>
-                    <Flex justify='center' gap='10px' flexWrap='wrap'>
-                        <Fade bottom distance="50px" delay={0}>
-                          <Text>Create.</Text>
-                        </Fade>
-                        <Fade bottom distance="50px" delay={300}>
-                          <Text>Influence.</Text>
-                        </Fade>
-                        <Fade bottom distance="50px" delay={600}>
-                          <Text>Earn.</Text>
-                        </Fade>
-                    </Flex>
-                    <Fade bottom distance="50px" delay={900}>
-                        Transform Your Skills into Income.
-                    </Fade>
+                  <Flex fontFamily="satoshi" position='relative' style={{ fontSize: 'clamp(30px, 4vw, 50px)' }} fontWeight='800' lineHeight='1.3' textAlign='center'>Create. Influence. Earn. <br /> Transform Your Skills into Income.
                   {isGreaterThan600 && <Flex w='fit-content' position='absolute' fontSize='15px' left={isGreaterThan1000 ? '70px' : "30px"} top={isGreaterThan1000 ?'-10px' : "-20px"} px='20px' py='5px' bg='#F9A602' borderRadius='30px' color='white' fontWeight='600' style={{transform: "rotate(-25deg)"}}>Hi Creators</Flex>} 
                   </Flex>
-                  <Fade bottom distance="50px" delay={900}><Text textAlign='center' my='10px' fontWeight='500' opacity='0.6'>Modify your knowledge into profitable online courses {isGreaterThan600 && <br/>} with personalized platforms.</Text></Fade>
-                  <Fade bottom distance="50px" delay={900}><Button onClick={() => _HandleGetStarted()} my='20px' w='200px' bg='#0081DF' colorScheme='blue' fontWeight='400' fontSize='13px' h='35px'>Let's Connect</Button></Fade>
-                  <Fade bottom distance="50px" delay={900}><Text style={{ fontSize: 'clamp(20px, 4vw, 30px)' }} mt='30px' fontWeight='800'>Which Creators we serve</Text></Fade>
+                  <Text textAlign='center' my='10px' fontWeight='500' opacity='0.6'>Modify your knowledge into profitable online courses {isGreaterThan600 && <br/>} with personalized platforms.</Text>
+                  <Button onClick={() => _HandleGetStarted()} my='20px' w='200px' bg='#0081DF' colorScheme='blue' fontWeight='400' fontSize='13px' h='35px'>Let's Connect</Button>
+                  <Text style={{ fontSize: 'clamp(20px, 4vw, 30px)' }} mt='30px' fontWeight='800'>Which Creators we serve</Text>
                 </Flex>
           </Flex>
 
