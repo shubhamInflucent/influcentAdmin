@@ -26,6 +26,7 @@ const Index = () => {
   const toast = useToast()
   const navigate = useNavigate();
   const [textIndex, setTextIndex] = useState(0);
+  const [isGreaterThan1100] = useMediaQuery('(min-width: 1100px)')
   const [isGreaterThan1000] = useMediaQuery('(min-width: 1000px)')
   const [isGreaterThan600] = useMediaQuery('(min-width: 600px)')
   const [isGreaterThan500] = useMediaQuery('(min-width: 500px)')
@@ -154,11 +155,11 @@ const Index = () => {
 
           <Flex py='100px' w={isGreaterThan1000 ? '80%' : "95%"} mx='auto' >
                 <Flex flexDir='column' alignItems='center' mx='auto'>
-                  <Flex fontFamily="satoshi" position='relative' style={{ fontSize: 'clamp(30px, 4vw, 50px)' }} fontWeight='900' lineHeight='1.3' textAlign='center'>Create. Influence. Earn. <br /> Transform Your Skills into Income.
+                  <Flex fontFamily="satoshi" position='relative' style={{ fontSize: 'clamp(30px, 4vw, 50px)' }} fontWeight='800' lineHeight='1.3' textAlign='center'>Create. Influence. Earn. <br /> Transform Your Skills into Income.
                   {isGreaterThan600 && <Flex w='fit-content' position='absolute' fontSize='15px' left={isGreaterThan1000 ? '70px' : "30px"} top={isGreaterThan1000 ?'-10px' : "-20px"} px='20px' py='5px' bg='#F9A602' borderRadius='30px' color='white' fontWeight='600' style={{transform: "rotate(-25deg)"}}>Hi Creators</Flex>} 
                   </Flex>
-                  <Text textAlign='center' my='10px' fontWeight='500' opacity='0.8'>Modify your knowledge into profitable online courses {isGreaterThan600 && <br/>} with personalized platforms.</Text>
-                  <Button onClick={() => _HandleGetStarted()} my='20px' w='200px' colorScheme='blue' fontWeight='400' fontSize='13px' h='35px'>Get Started</Button>
+                  <Text textAlign='center' my='10px' fontWeight='500' opacity='0.6'>Modify your knowledge into profitable online courses {isGreaterThan600 && <br/>} with personalized platforms.</Text>
+                  <Button onClick={() => _HandleGetStarted()} my='20px' w='200px' bg='#0081DF' colorScheme='blue' fontWeight='400' fontSize='13px' h='35px'>Let's Connect</Button>
                   <Text style={{ fontSize: 'clamp(20px, 4vw, 30px)' }} mt='30px' fontWeight='800'>Which Creators we serve</Text>
                 </Flex>
           </Flex>
@@ -168,9 +169,9 @@ const Index = () => {
           <Flex bg='#F3FBF8' w='100%' px='30px' py={isGreaterThan1000 ? '70px' : "30px"}>
             <Flex w={isGreaterThan1000 ? '80%' : "95%"} flexDir={isGreaterThan600 ? "row" : "column-reverse"} gap={!isGreaterThan600 && "40px"} mx='auto' alignItems={isGreaterThan600 ? "center" : "center"} justify='space-between'>
               <Flex flexDir='column' alignItems={isGreaterThan600 ? "left" : "center"} textAlign={isGreaterThan600 ? "left" : "center"}  w='100%' gap='20px'>
-                <Text fontFamily="satoshi" style={{ fontSize: 'clamp(30px, 4vw, 50px)' }} fontWeight='900' lineHeight='1.3'>About us</Text>
-                <Text fontWeight='500' opacity='0.8'>At Influcent, we're dedicated to empowering {isGreaterThan600 && <br />} creators to monetize their skill and {isGreaterThan600 && <br/>} passions. Our mission is to help influencers{isGreaterThan600 &&  <br />} and experts expand their income streams {isGreaterThan600 && <br /> }beyond traditional brand deals by offering {isGreaterThan600 && <br/>} personalized platforms to share and sell {isGreaterThan600 && <br/>} their knowledge</Text>
-                <Button  onClick={() => _HandleGetStarted()}  my='20px' w='200px' colorScheme='blue' fontWeight='400' fontSize='13px' h='35px'>Get Started</Button>
+                <Text fontFamily="satoshi" style={{ fontSize: 'clamp(30px, 4vw, 50px)' }} fontWeight='800' lineHeight='1.3'>About us</Text>
+                <Text fontWeight='500' opacity='0.6'>At Influcent, we're dedicated to empowering {isGreaterThan600 && <br />} creators to monetize their skill and {isGreaterThan600 && <br/>} passions. Our mission is to help influencers{isGreaterThan600 &&  <br />} and experts expand their income streams {isGreaterThan600 && <br /> }beyond traditional brand deals by offering {isGreaterThan600 && <br/>} personalized platforms to share and sell {isGreaterThan600 && <br/>} their knowledge</Text>
+                <Button  onClick={() => _HandleGetStarted()}  my='20px' w='200px' colorScheme='blue' fontWeight='400' fontSize='13px' h='35px' bg='#0081DF'>Get in touch</Button>
               </Flex>
               <Flex w='100%' justify={isGreaterThan600 ? 'end' : "center"}>
                 <Image src={aboutUs} objectFit='contain' w='70%'/>
@@ -178,8 +179,8 @@ const Index = () => {
             </Flex>
           </Flex>
 
-          <Flex w={isGreaterThan1000 ? '80%' : "95%"} mx='auto' flexDir='column' alignItems='center'>
-            <Text fontFamily="satoshi" mt='100px' mb='30px' style={{ fontSize: 'clamp(30px, 4vw, 50px)' }} fontWeight='800' lineHeight='1.3'>Our services</Text>
+          <Flex w={isGreaterThan1100 ? '80%' : "95%"} mx='auto' flexDir='column' alignItems='center'>
+            <Text fontFamily="satoshi" mt='100px' mb='30px' style={{ fontSize: 'clamp(30px, 4vw, 50px)' }} fontWeight='800' lineHeight='1.3'>Our Services</Text>
             <LandingPageCarousel />
           </Flex>
 
@@ -195,7 +196,7 @@ const Index = () => {
 
                   <Flex mt='30px' mb='10px' py='10px' style={{ fontSize: 'clamp(15px, 4vw, 25px)' }} fontWeight='800' w='80%' borderBottom="1px solid #e7e7e7">Content</Flex>
 
-                  <UnorderedList  fontWeight='700'>
+                  <UnorderedList  fontWeight='400'>
                     <ListItem>Course Creation Blueprint</ListItem>
                     <ListItem>Personal Branding Mastery</ListItem>
                     <ListItem>Marketing and Promotion Strategies</ListItem>
@@ -206,25 +207,25 @@ const Index = () => {
                   <Flex fontFamily="Hanken Grotesk"  alignItems={isGreaterThan600 ? 'flex-start' : 'center'} flexDir='column' mt='40px' bg='white' borderRadius='10px' padding='20px' gap='20px'>
                     <SimpleGrid w='100%' columns={isGreaterThan500 ? 2 : 1} spacing="10px">
                     <FormControl isRequired>
-                      <FormLabel fontSize='14px' opacity="0.8">First Name</FormLabel>
+                      <FormLabel fontSize='14px' opacity="0.6">First Name</FormLabel>
                       <Input type="text" name="firstName" value={formData.firstName} onChange={handleChange} />
                     </FormControl>
                     <FormControl isRequired>
-                      <FormLabel fontSize='14px' opacity="0.8">Last Name</FormLabel>
+                      <FormLabel fontSize='14px' opacity="0.6">Last Name</FormLabel>
                       <Input type="text" name="lastName" value={formData.lastName} onChange={handleChange} />
                     </FormControl>
                     <FormControl isRequired>
-                      <FormLabel  fontSize='14px' opacity="0.8">Phone Number</FormLabel>
+                      <FormLabel  fontSize='14px' opacity="0.6">Phone Number</FormLabel>
                       <Input type="tel" name="phone" value={formData.phone} onChange={handleChange}  />
                     </FormControl>
                     <FormControl isRequired>
-                      <FormLabel  fontSize='14px' opacity="0.8">E-mail ID</FormLabel>
+                      <FormLabel  fontSize='14px' opacity="0.6">E-mail ID</FormLabel>
                       <Input type="email" name="emailId" value={formData.emailId} onChange={handleChange} />
                     </FormControl>
                     </SimpleGrid>
                     <Flex flexDir='column' gap='5px' w='100%'>
                     <FormControl isRequired >
-                      <FormLabel fontSize='14px'  opacity="0.8">Content Category</FormLabel>
+                      <FormLabel fontSize='14px'  opacity="0.6">Content Category</FormLabel>
                       <Select placeholder="select" name="contentCategory" value={formData.contentCategory} onChange={(e) => setFormData({ ...formData, contentCategory: e.target.value })}>
                         {textTerms.map((item, index) => (
                           <option key={index} value={item}>{item}</option>
@@ -232,7 +233,7 @@ const Index = () => {
                       </Select>
                     </FormControl>
                     </Flex>
-                    <Button isLoading={loading} type="submit" w='100%' colorScheme='blue' fontWeight='400' fontSize='13px' h='40px'>Download Free</Button>
+                    <Button isLoading={loading} type="submit" bg='#0081DF' w='100%' colorScheme='blue' fontWeight='400' fontSize='13px' h='40px'>Download Free</Button>
                   </Flex>
                   </form>
 

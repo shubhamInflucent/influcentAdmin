@@ -102,11 +102,11 @@ const Index = () => {
                   <Flex fontFamily="Hanken Grotesk"  alignItems={isGreaterThan600 ? 'flex-start' : 'center'} flexDir='column' mt='40px' bg='white' borderRadius='10px' padding='20px' gap='20px'>
                     <SimpleGrid w='100%' columns={isGreaterThan500 ? 2 : 1} spacing="10px">
                     <FormControl isRequired>
-                      <FormLabel  fontSize='14px' opacity="0.8">Full Name</FormLabel>
+                      <FormLabel  fontSize='14px' opacity="0.6">Full Name</FormLabel>
                       <Input type="text" name="fullName" value={formData.fullName} onChange={handleChange} />
                     </FormControl>
                     <FormControl isRequired>
-                      <FormLabel fontSize='14px'  opacity="0.8">Content Category</FormLabel>
+                      <FormLabel fontSize='14px'  opacity="0.6">Content Category</FormLabel>
                       <Select placeholder="select" name="contentCategory" value={formData.contentCategory} onChange={(e) => setFormData({ ...formData, contentCategory: e.target.value })}>
                         {contentCategories.map((item, index) => (
                           <option key={index} value={item}>{item}</option>
@@ -114,19 +114,19 @@ const Index = () => {
                       </Select>
                     </FormControl>
                     <FormControl isRequired>
-                      <FormLabel  fontSize='14px' opacity="0.8">Phone Number</FormLabel>
+                      <FormLabel  fontSize='14px' opacity="0.6">Phone Number</FormLabel>
                       <Input type="tel" name="phone" value={formData.phone} onChange={handleChange}  />
                     </FormControl>
                     <FormControl isRequired>
-                      <FormLabel  fontSize='14px' opacity="0.8">E-mail ID</FormLabel>
+                      <FormLabel  fontSize='14px' opacity="0.6">E-mail ID</FormLabel>
                       <Input type="email" name="emailId" value={formData.emailId} onChange={handleChange} />
                     </FormControl>
                     </SimpleGrid>
                     <Flex flexDir='column' gap='5px' w='100%'>
-                    <Text  opacity="0.8" fontSize='14px'>Message</Text>
+                    <Text  opacity="0.6" fontSize='14px'>Message</Text>
                     <Textarea name="message" value={formData.message} onChange={handleChange}/>
                     </Flex>
-                    <Button isLoading={loading} type="submit" w='100%' colorScheme='blue' fontWeight='400' fontSize='13px' h='40px' >Send Message</Button>
+                    <Button  bg='#0081DF' isLoading={loading} type="submit" w='100%' colorScheme='blue' fontWeight='400' fontSize='13px' h='40px' >Send Message</Button>
                   </Flex>
                   </form>
 

@@ -77,14 +77,16 @@ export default function App() {
 
 const Slide1 = () => {
   const [isGreaterThan1000] = useMediaQuery('(min-width: 1000px)')
+  const [isGreaterThan1100] = useMediaQuery('(min-width: 1100px)')
   const [isGreaterThan600] = useMediaQuery('(min-width: 600px)')
+  const [isGreaterThan800] = useMediaQuery('(min-width: 800px)')
 
     return (
           <Flex h='300px' style={{ fontSize: 'clamp(13px, 2vw, 18px)' }} w='100%' borderRadius='8px' border="1px solid #e7e7e7" justify='space-between'>
-                <Flex pl={isGreaterThan1000 ? '30px' : "10px"} justify='center' textAlign='start' alignItems='start' flexDir='column'>
-                    <Image src={desktopIcons} style={{height: "60px", width: "60px"}} />
-                    <Text style={{ fontSize: 'clamp(18px, 2vw, 25px)' }} fontWeight='700'>Personalized Website <br /> & app development</Text>
-                    <Text  fontWeight='500' opacity='0.8'>We build your dream {isGreaterThan600 && <br />} digital space that reflects <br/> your persona & {isGreaterThan600 && <br/>} uniqueness </Text>
+                <Flex pt={ isGreaterThan1100 ? '30px' : "10px"} pl={isGreaterThan1000 ? '30px' : "10px"} justify='start' textAlign='start' alignItems='start' flexDir='column'>
+                    <Image mb='20px' src={desktopIcons} style={{height: "60px", width: "60px"}} />
+                    <Text mb='10px' style={{ fontSize: 'clamp(18px, 2vw, 25px)' }} lineHeight='1.2' fontWeight='700'>Personalized Website {isGreaterThan1000 && <br/>}& app development</Text>
+                    <Text  fontWeight='500' opacity='0.6' lineHeight='1.2'>We build your dream {isGreaterThan1000 && <br/>} digital space that reflects {isGreaterThan1000 && <br/>} your persona & {isGreaterThan1000 && <br/>} uniqueness </Text>
                 </Flex>
                 <Flex justify='end'>
                    <Image src={number1}  />
@@ -95,14 +97,16 @@ const Slide1 = () => {
 
 const Slide2 = () => {
   const [isGreaterThan1000] = useMediaQuery('(min-width: 1000px)')
+  const [isGreaterThan1100] = useMediaQuery('(min-width: 1100px)')
   const [isGreaterThan600] = useMediaQuery('(min-width: 600px)')
+  const [isGreaterThan800] = useMediaQuery('(min-width: 800px)')
 
     return (
           <Flex h='300px' style={{ fontSize: 'clamp(13px, 2vw, 18px)' }} w='100%' borderRadius='8px' border="1px solid #e7e7e7" justify='space-between'>
-                <Flex  pl={isGreaterThan1000 ? '30px' : "10px"} justify='center' textAlign='start' alignItems='start' flexDir='column'>
-                    <Image src={cardIcon} style={{height: "60px", width: "60px"}} />
-                    <Text style={{ fontSize: 'clamp(18px, 2vw, 25px)' }} fontWeight='700'>Seamless Payment <br/> Processing</Text>
-                    <Text fontWeight='500' opacity='0.8'>Recieve quick & secured {isGreaterThan600 && <br/>} payments from all over <br/> the world and track your{isGreaterThan600 && <br/>} income</Text>
+                <Flex  pt={ isGreaterThan1100 ? '30px' : "10px"}  pl={isGreaterThan1000 ? '30px' : "10px"} justify='start' textAlign='start' alignItems='start' flexDir='column'>
+                    <Image mb='20px' src={cardIcon} style={{height: "60px", width: "60px"}} />
+                    <Text mb='10px' style={{ fontSize: 'clamp(18px, 2vw, 25px)' }} lineHeight='1.2' fontWeight='700'>Seamless Payment  {isGreaterThan1000 && <br/>} Processing</Text>
+                    <Text fontWeight='500' opacity='0.6' lineHeight='1.2'>Recieve quick & secured {isGreaterThan600 && <br/>} payments from all over{isGreaterThan1000 && <br/>} the world and track your {isGreaterThan1000 && <br/>} income</Text>
                 </Flex>
                 
                 <Flex justify='end'>
@@ -113,14 +117,16 @@ const Slide2 = () => {
 }
 const Slide3 = () => {
   const [isGreaterThan1000] = useMediaQuery('(min-width: 1000px)')
+  const [isGreaterThan1100] = useMediaQuery('(min-width: 1100px)')
   const [isGreaterThan600] = useMediaQuery('(min-width: 600px)')
+  const [isGreaterThan800] = useMediaQuery('(min-width: 800px)')
 
     return (
           <Flex h='300px' style={{ fontSize: 'clamp(13px, 2vw, 18px)' }} w='100%' borderRadius='8px' border="1px solid #e7e7e7" justify='space-between'>
-                <Flex  pl={isGreaterThan1000 ? '30px' : "10px"} justify='center' textAlign='start' alignItems='start' flexDir='column'>
-                    <Image src={customerManagement} style={{height: "60px", width: "60px"}} />
-                    <Text style={{ fontSize: 'clamp(18px, 2vw, 25px)' }} fontWeight='700'>Efficient Customer<br /> Management</Text>
-                    <Text  fontWeight='500' opacity='0.8'>Give your customers{isGreaterThan600 && <br />} best experience as they <br/>  are interacting with an {isGreaterThan600 && <br/>} enterprise</Text>
+                <Flex pt={ isGreaterThan1100 ? '30px' : "10px"}   pl={isGreaterThan1000 ? '30px' : "10px"} justify='start' textAlign='start' alignItems='start' flexDir='column'>
+                    <Image mb='20px' src={customerManagement} style={{height: "60px", width: "60px"}} />
+                    <Text  mb='10px' style={{ fontSize: 'clamp(18px, 2vw, 25px)' }} fontWeight='700' lineHeight='1.2'>Efficient Customer {isGreaterThan1000 && <br/>} Management</Text>
+                    <Text  fontWeight='500' opacity='0.6' lineHeight='1.2'>Give your customers {isGreaterThan1000 && <br/>} best experience as they {isGreaterThan1000 && <br/>} are interacting with an {isGreaterThan1000 && <br/>} enterprise</Text>
                 </Flex>
                 <Flex justify='end'>
                    <Image src={number3}  />
@@ -131,14 +137,16 @@ const Slide3 = () => {
 }
 const Slide4 = () => {
   const [isGreaterThan1000] = useMediaQuery('(min-width: 1000px)')
+  const [isGreaterThan1100] = useMediaQuery('(min-width: 1100px)')
   const [isGreaterThan600] = useMediaQuery('(min-width: 600px)')
+  const [isGreaterThan800] = useMediaQuery('(min-width: 800px)')
 
     return (
           <Flex h='300px' style={{ fontSize: 'clamp(13px, 2vw, 18px)' }} w='100%' borderRadius='8px' border="1px solid #e7e7e7" justify='space-between'>
-                <Flex  pl={isGreaterThan1000 ? '30px' : "10px"} justify='center' textAlign='start' alignItems='start' flexDir='column'>
-                    <Image src={codeIcon} style={{height: "60px", width: "60px"}} />
-                    <Text style={{ fontSize: 'clamp(18px, 2vw, 25px)' }} fontWeight='700'>Dedicated Technical <br/> Support</Text>
-                    <Text fontWeight='500' opacity='0.8'>Focus on keep growing <br/> and leave rest on us </Text>
+                <Flex pt={ isGreaterThan1100 ? '30px' : "10px"}   pl={isGreaterThan1000 ? '30px' : "10px"} justify='start' textAlign='start' alignItems='start' flexDir='column'>
+                    <Image mb='20px' src={codeIcon} style={{height: "60px", width: "60px"}} />
+                    <Text mb='10px' style={{ fontSize: 'clamp(18px, 2vw, 25px)' }} fontWeight='700' lineHeight='1.2'>Dedicated Technical {isGreaterThan1000 && <br/>} Support</Text>
+                    <Text fontWeight='500' opacity='0.6' lineHeight='1.2'>Focus on keep growing {isGreaterThan1000 && <br/>} and leave rest on us </Text>
                 </Flex>
                 
                 <Flex justify='end'>
