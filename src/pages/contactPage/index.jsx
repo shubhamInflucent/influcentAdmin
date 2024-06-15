@@ -13,7 +13,8 @@ const initialFormState = {
   emailId: '',
   phone: '',
   contentCategory: '',
-  message: ''
+  message: '',
+  hadDownloadedEbook: false,
 }
 
 const Index = () => {
@@ -123,8 +124,10 @@ const Index = () => {
                     </FormControl>
                     </SimpleGrid>
                     <Flex flexDir='column' gap='5px' w='100%'>
-                    <Text  opacity="0.6" fontSize='14px'>Message</Text>
-                    <Textarea name="message" value={formData.message} onChange={handleChange}/>
+                    <FormControl isRequired>
+                      <FormLabel opacity="0.6" fontSize='14px'>Message</FormLabel>
+                      <Textarea name="message" value={formData.message} onChange={handleChange}/>
+                    </FormControl>
                     </Flex>
                     <Button  bg='#0081DF' isLoading={loading} type="submit" w='100%' colorScheme='blue' fontWeight='400' fontSize='13px' h='40px' >Send Message</Button>
                   </Flex>

@@ -82,7 +82,8 @@ const Index = () => {
            emailId: formData.emailId,
            phone: formData.phone,
            contentCategory: formData.contentCategory,
-           message: formData.message,
+           message:  formData.firstName + " " + formData.lastName + " has downloaded the E-book",
+           hadDownloadedEbook: true,
         }
       });
 

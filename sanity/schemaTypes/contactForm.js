@@ -28,6 +28,11 @@ export default {
         name: 'message',
         type: 'text',
         title: 'Message'
+      },
+      {
+        name: 'hadDownloadedEbook',
+        type: 'boolean',
+        title: 'Downloaded E-book'
       }
     ]
   }
