@@ -1,16 +1,6 @@
 import React, {useEffect, useState} from "react";
-import {Flex, Button, Text, Image, SimpleGrid, UnorderedList, ListItem, Input, Select, FormControl, FormLabel, useMediaQuery, useToast } from "@chakra-ui/react"
-import Navbar from './../../components/navbar/index.jsx';
-import {useNavigate} from "react-router-dom"
-import Footer from './../../components/footer/index.jsx';
-import {aboutUs, eBookFree} from './../../assets/landingPage/export.js';
-import ReactTextTransition, { presets } from "react-text-transition";
-import LandingPageMarquee from './../../components/landingPageMarquee/index.jsx';
-import LandingPageCarousel from './../../components/landingPageCarousel/index.jsx';
+import {Flex, Button, Text, Image} from "@chakra-ui/react"
 import sanityClient from '@sanity/client';
-import PaymentFunction from './../../components/payment/index.jsx';
-import emailjs from 'emailjs-com';
-import InflucentEbook from './../../assets/landingPage/Influcent_E-Book.pdf';
 import {influcentWhite} from './../../assets/icons/export.js';
 import * as XLSX from 'xlsx';
 import _ from "underscore"
